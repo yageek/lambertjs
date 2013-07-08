@@ -2,7 +2,7 @@
   "targets": [
     {
       "target_name": "lambert",
-      "sources": [ "lambert.cc" ]
+      "sources": [ "lambert.cc", "lambert/src/lambert.c"]
     }
   ]
 }
