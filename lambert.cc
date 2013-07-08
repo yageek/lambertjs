@@ -61,9 +61,9 @@ Handle<Value> lambertTowgs84(const Arguments& args){
 	lambert_to_wgs84(&org,&dest,zone);
 
 	Local<Object> point = Object::New();
-	point->Set(String::NewSymbol("x"),Number::New(lon));
-	point->Set(String::NewSymbol("y"),Number::New(lat));
-	point->Set(String::NewSymbol("z"),Number::New(h));
+	point->Set(String::NewSymbol("x"),Number::New(dest.x));
+	point->Set(String::NewSymbol("y"),Number::New(dest.y));
+	point->Set(String::NewSymbol("z"),Number::New(dest.z));
 
 	return scope.Close(point);
 

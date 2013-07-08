@@ -13,5 +13,6 @@ exports['testValue'] = function (test)
 		z: 0
 	}
 	dest  = lambert.lambertTowgs84(org,1);
-	
+	console.log("(Rad)X:" + dest.x + " Y:" + dest.y + " Z:" + dest.z);
+	test.done();
 }
