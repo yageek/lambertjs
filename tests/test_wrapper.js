@@ -5,7 +5,7 @@ exports['require'] = function (test) {
 	test.done();
 };
 
-exports['testValue'] = function (test)
+exports['testValueRad'] = function (test)
 {
 	org = {
 		x: 1000,
@@ -13,6 +13,18 @@ exports['testValue'] = function (test)
 		z: 0
 	}
 	dest  = lambert.lambertTowgs84(org,1);
+	console.log("(Rad)X:" + dest.x + " Y:" + dest.y + " Z:" + dest.z);
+	test.done();
+}
+
+exports['testValueDeg'] = function (test)
+{
+	org = {
+		x: 1000,
+		y: 1000,
+		z: 0
+	}
+	dest  = lambert.lambertTowgs84Deg(org,1);
 	console.log("(Rad)X:" + dest.x + " Y:" + dest.y + " Z:" + dest.z);
 	test.done();
 }
