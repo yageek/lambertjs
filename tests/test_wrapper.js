@@ -1,4 +1,4 @@
-var lambert = require('../build/Release/lambert');
+var lambert = require('../build/Release/lambertjs');
 
 exports['require'] = function (test) {
 	test.ok(typeof lambert !== 'undefined',"Import should work");

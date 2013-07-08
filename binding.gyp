@@ -1,8 +1,8 @@
 {
   "targets": [
     {
-      "target_name": "lambert",
-      "sources": [ "lambert.cc", "lambert/src/lambert.c"]
+      "target_name": "lambertjs",
+      "sources": [ "lambertjs.cc", "lambert/src/lambert.c"]
     }
   ]
 }

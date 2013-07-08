@@ -123,4 +123,4 @@ void init(Handle<Object> exports) {
    exports->Set(String::NewSymbol("lambertTowgs84Deg"),
       FunctionTemplate::New(lambertTowgs84Deg)->GetFunction());
 }
-NODE_MODULE(lambert, init)
+NODE_MODULE(lambertjs, init)
