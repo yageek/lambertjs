@@ -4,7 +4,6 @@
   "description": "lambert bindings for v8 javascript engine",
   "version": "0.0.1",
   "scripts": {
-    "preinstall": "git submodule update -i -r",
     "test": "node --expose_gc ./node_modules/nodeunit/bin/nodeunit tests"
   },
   "repository": {
