@@ -1,7 +1,10 @@
 #include <node.h>
 #include <v8.h>
 
-#include "lambert/src/lambert.h"
+extern "C" {
+	#include "lambert/src/lambert.h"	
+}
+
 
 using namespace v8;
 
