@@ -5,6 +5,18 @@ exports['require'] = function (test) {
 	test.done();
 };
 
+
+exports['testFail'] = function (test)
+{
+	org = {
+		x: 1000,
+		z: 0
+	}
+	test.throws(function(){
+		dest  = lambert.lambertTowgs84(org,1);
+	},Error,"Should fails");
+	test.done();
+}
 exports['testValueRad'] = function (test)
 {
 	org = {
