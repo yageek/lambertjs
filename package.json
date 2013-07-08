@@ -1,0 +1,20 @@
+{
+  "name": "lambert",
+  "author": "Yannick Heinrich - http://github.com/yageek",
+  "description": "lambert bindings for v8 javascript engine",
+  "version": "0.0.1",
+  "scripts": {
+    "test": "node --expose_gc ./node_modules/nodeunit/bin/nodeunit tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/yageek/lambert-node.git"
+  },
+  "bugs": {
+    "mail": "yannick.heinrich@gmail.com",
+    "url": "http://github.com/yageek/lambert-node/issues"
+  },
+  "devDependencies": {
+    "nodeunit": "*"
+  }
+}
