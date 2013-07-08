@@ -1,0 +1,3 @@
+[submodule "lambert"]
+	path = lambert
+	url = https://github.com/YaGeek/lambert.git
