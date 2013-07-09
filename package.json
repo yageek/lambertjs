@@ -1,7 +1,7 @@
 {
   "name": "lambertjs",
   "author": "Yannick Heinrich - http://github.com/yageek",
-  "description": "lambert bindings for v8 javascript engine",
+  "description": "Lambertjs is a wrapper to the lambert C library.",
   "version": "0.0.1",
   "scripts": {
     "test": "node --expose_gc ./node_modules/nodeunit/bin/nodeunit tests"

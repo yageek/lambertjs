@@ -71,7 +71,7 @@ Handle<Value> lambertTowgs84(const Arguments& args){
 
 	LambertZone zone = (LambertZone) val;
 
-	Point org = {lon,lat,h},dest = {0,0,0};
+	YGLambertPoint org = {lon,lat,h},dest = {0,0,0};
 
 	lambert_to_wgs84(&org,&dest,zone);
 
@@ -104,7 +104,7 @@ Handle<Value> lambertTowgs84Deg(const Arguments& args ){
 
 	LambertZone zone = (LambertZone) val;
 
-	Point org = {lon,lat,h},dest = {0,0,0};
+	YGLambertPoint org = {lon,lat,h},dest = {0,0,0};
 
 	lambert_to_wgs84_deg(&org,&dest,zone);
 
