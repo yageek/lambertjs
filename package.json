@@ -4,7 +4,8 @@
   "description": "Lambertjs is a wrapper to the lambert C library.",
   "version": "0.0.1",
   "scripts": {
-    "test": "node --expose_gc ./node_modules/nodeunit/bin/nodeunit tests"
+    "test": "node --expose_gc ./node_modules/nodeunit/bin/nodeunit tests",
+    "install": "node-gyp rebuild"
   },
   "repository": {
     "type": "git",
@@ -13,6 +14,9 @@
   "bugs": {
     "mail": "yannick.heinrich@gmail.com",
     "url": "http://github.com/yageek/lambertjs/issues"
+  },
+  "dependencies":{
+	  "bindings":"1.0.0"
   },
   "devDependencies": {
     "nodeunit": "*"
