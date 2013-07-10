@@ -40,3 +40,14 @@ exports['testValueDeg'] = function (test)
 	console.log("(Rad)X:" + dest.x + " Y:" + dest.y + " Z:" + dest.z);
 	test.done();
 }
+exports['testEnum'] = function (test)
+{
+	test.ok(lambert.LambertI == 0,"LambertI should equal 0");
+	test.ok(lambert.LambertII == 1,"LambertII should equal 1");
+	test.ok(lambert.LambertIII == 2,"LambertIII should equal 2");
+	test.ok(lambert.LambertIV == 3,"LambertIV should equal 3");
+	test.ok(lambert.LambertIIExtended == 4, "LambertIIExtended should equal 4");
+	test.ok(lambert.Lambert93 == 5, "Lambert93 should equal  5");
+
+	test.done();
+}

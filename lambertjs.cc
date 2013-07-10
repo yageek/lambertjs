@@ -122,5 +122,18 @@ void init(Handle<Object> exports) {
       FunctionTemplate::New(lambertTowgs84)->GetFunction());
    exports->Set(String::NewSymbol("lambertTowgs84Deg"),
       FunctionTemplate::New(lambertTowgs84Deg)->GetFunction());
+   exports->Set(String::NewSymbol("LambertI"),
+     Number::New(LAMBERT_I));
+     exports->Set(String::NewSymbol("LambertII"),
+     Number::New(LAMBERT_II));
+       exports->Set(String::NewSymbol("LambertIII"),
+     Number::New(LAMBERT_III));
+         exports->Set(String::NewSymbol("LambertIV"),
+     Number::New(LAMBERT_IV));
+           exports->Set(String::NewSymbol("LambertIIExtended"),
+     Number::New(LAMBERT_II_E));
+             exports->Set(String::NewSymbol("Lambert93"),
+     Number::New(LAMBERT_93));
+
 }
 NODE_MODULE(lambertjs, init)
