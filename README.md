@@ -1,11 +1,9 @@
 # Description
 
 Lambertjs is a wrapper to the lambert C library.
-
 # Install
 
 `npm install lambertjs`
-
 # Usage
 
 ```javascript
