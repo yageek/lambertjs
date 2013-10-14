@@ -69,9 +69,9 @@ Handle<Value> lambertTowgs84(const Arguments& args){
 
 	long long val = args[1]->ToInteger()->Value();
 
-	LambertZone zone = (LambertZone) val;
+	YGLambertZone zone = (YGLambertZone) val;
 
-	YGLambertPoint org = {lon,lat,h},dest = {0,0,0};
+	YGPoint org = {lon,lat,h,DEGREE},dest = {0,0,0,DEGREE};
 
 	lambert_to_wgs84(&org,&dest,zone);
 
@@ -102,9 +102,9 @@ Handle<Value> lambertTowgs84Deg(const Arguments& args ){
 
 	long long val = args[1]->ToInteger()->Value();
 
-	LambertZone zone = (LambertZone) val;
+	YGLambertZone zone = (YGLambertZone) val;
 
-	YGLambertPoint org = {lon,lat,h},dest = {0,0,0};
+	YGPoint org = {lon,lat,h,DEGREE},dest = {0,0,0,DEGREE};
 
 	lambert_to_wgs84_deg(&org,&dest,zone);
 
