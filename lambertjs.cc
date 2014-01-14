@@ -71,14 +71,13 @@ Handle<Value> lambertTowgs84(const Arguments& args){
 
 	YGLambertZone zone = (YGLambertZone) val;
 
-	YGPoint org = {lon,lat,h,DEGREE},dest = {0,0,0,DEGREE};
-
-	lambert_to_wgs84(&org,&dest,zone);
-
+	YGPoint org = YGMeterPoint(lon,lat,h);
+	org = YGPointConvertWGS84(org,zone);
+	
 	Local<Object> point = Object::New();
-	point->Set(String::NewSymbol("x"),Number::New(dest.x));
-	point->Set(String::NewSymbol("y"),Number::New(dest.y));
-	point->Set(String::NewSymbol("z"),Number::New(dest.z));
+	point->Set(String::NewSymbol("x"),Number::New(org.x));
+	point->Set(String::NewSymbol("y"),Number::New(org.y));
+	point->Set(String::NewSymbol("z"),Number::New(org.z));
 
 	return scope.Close(point);
 
@@ -104,14 +103,13 @@ Handle<Value> lambertTowgs84Deg(const Arguments& args ){
 
 	YGLambertZone zone = (YGLambertZone) val;
 
-	YGPoint org = {lon,lat,h,DEGREE},dest = {0,0,0,DEGREE};
-
-	lambert_to_wgs84_deg(&org,&dest,zone);
+	YGPoint org = YGMeterPoint(lon,lat,h);
+	org = YGPointConvertWGS84(org,zone);
 
 	Local<Object> point = Object::New();
-	point->Set(String::NewSymbol("x"),Number::New(dest.x));
-	point->Set(String::NewSymbol("y"),Number::New(dest.y));
-	point->Set(String::NewSymbol("z"),Number::New(dest.z));
+	point->Set(String::NewSymbol("x"),Number::New(org.x));
+	point->Set(String::NewSymbol("y"),Number::New(org.y));
+	point->Set(String::NewSymbol("z"),Number::New(org.z));
 
 	return scope.Close(point);
 
